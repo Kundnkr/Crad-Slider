@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="https://kit.fontawesome.com/d25b260e05.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <div class="logo">
+                <h3>Logo</h3>
+            </div>
+            <div class="side-icon" onclick="toggleNav()">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </div>
+        </div>
+        <ul class="nav-item visible">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Login</li>
+        </ul>
+
+    </header>
+    <h1 class="main-heading"><span style="color: red;">Pro</span>jects</h1>
+    <section class="cards">
+        <div class="card card-1">
+            <div class="card-disc">
+                <h1>Facebook Clone</h1>
+                <div>
+                    <i class="fa-brands fa-github fa-2xl"><a href=""></a></i>
+                    <i class="fa-solid fa-link fa-2xl"></i>
+                </div>
+            </div>
+            <img src="./img/blake-connally-IKUYGCFmfw4-unsplash.jpg" alt="">
+        </div>
+        <div class="card card-2">
+            <div class="card-disc">
+                <h1>Twitter Clone</h1>
+                <div>
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                    <i class="fa-solid fa-link fa-2xl"></i>
+                </div>
+            </div>
+            <img src="./img/mohammad-rahmani-LrxSl4ZxoRs-unsplash.jpg" alt="">
+        </div>
+        <div class="card card-3">
+            <div class="card-disc">
+                <h1>Linkdin clone</h1>
+                <div>
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                    <i class="fa-solid fa-link fa-2xl"></i>
+                </div>
+            </div>
+            <img src="./img/pexels-kevin-ku-577585.jpg" alt="">
+        </div>
+    </section>
+</body>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    $(document).ready(
+    $('.side-icon').click(()=>{
+        $('.nav-item').toggleClass('visible');
+        $('header').toggleClass('height');
+    })
+
+)
+    ScrollReveal({
+        reset: true,
+        distance: '50px',
+        duration: 1000,
+        delay: 500
+    });
+    ScrollReveal().reveal('.cards', { origin: 'bottom' });
+    ScrollReveal().reveal('.main-heading', { origin: 'top' });
+</script>
+
+</html>
